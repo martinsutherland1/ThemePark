@@ -5,6 +5,7 @@ import people.Visitor;
 import stalls.*;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 public class ThemeParkTest {
 
@@ -18,6 +19,7 @@ public class ThemeParkTest {
     IceCreamStall iceCreamStall;
 
     Visitor visitor, visitor2;
+
 
     @Before
     public void before(){
@@ -81,7 +83,13 @@ public class ThemeParkTest {
         themePark.addToAttractions(park);
         themePark.addToAttractions(playground);
 
-        assertEquals(7, themePark.addReviewedToList());
+        assertTrue(themePark.addReviewedToList().contains(dodgems));
+        assertTrue(themePark.addReviewedToList().contains(candyflossStall));
+        assertTrue(themePark.addReviewedToList().contains(tobaccoStall));
+        assertTrue(themePark.addReviewedToList().contains(iceCreamStall));
+        assertTrue(themePark.addReviewedToList().contains(rollerCoaster));
+        assertTrue(themePark.addReviewedToList().contains(park));
+        assertTrue(themePark.addReviewedToList().contains(playground));
     }
 
 

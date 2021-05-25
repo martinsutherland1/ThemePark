@@ -54,14 +54,14 @@ public class ThemePark {
 
     }
 
-    public int addReviewedToList(){
-        ArrayList<Object> reviewedItems = null;
+    public ArrayList<Object> addReviewedToList(){
+        ArrayList<Object> reviewedItems = new ArrayList<>();
 
         reviewedItems.addAll(this.attractions);
 
         reviewedItems.addAll(this.stalls);
 
-        return reviewedItems.size();
+        return reviewedItems;
     }
 
 
